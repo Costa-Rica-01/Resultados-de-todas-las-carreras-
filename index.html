@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Erick Córdoba Esquivel | Firsty Cycling Web</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     PROTECCIÓN
+===================================================== -->
+
+<script>
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    alert("Copia deshabilitada 🚫");
+});
+
+document.addEventListener("keydown", function(e) {
+
+    if (
+        (e.ctrlKey && e.key.toLowerCase() === "u") ||
+        (e.ctrlKey && e.key.toLowerCase() === "c") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        e.key === "F12"
+    ) {
+        e.preventDefault();
+        alert("Acción bloqueada 🚫");
+    }
+});
+</script>
+
+
+<!-- =====================================================
+     ENCABEZADO
+===================================================== -->
+
+<header class="encabezado">
+
+    <h1>Bienvenidos a la Página de FirstyCyclingWeb</h1>
+
+    <p>
+        Explora los resultados de las últimas competencias
+    </p>
+
+</header>
+
+
+<!-- =====================================================
+     PERFIL DEL CICLISTA
+===================================================== -->
+
+<section class="perfil-ciclista">
+
+    <h2>
+        Erick Córdoba Esquivel
+
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
+            alt="Costa Rica"
+            width="42">
+    </h2>
+
+    <hr>
+
+    <div class="perfil-info">
+
+        <div class="perfil-datos">
+            <strong>Ciclista</strong> • Costa Rica
+        </div>
+
+        <div class="perfil-redes">
+
+            <a href="https://x.com/EsquivelEr85735"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="X">
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+            </a>
+
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA=="
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a href="https://strava.app.link/fchCAI0UrWb"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Strava">
+
+                <i class="fa-brands fa-strava"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INFORMACIÓN
+===================================================== -->
+
+<section class="informacion">
+
+    <p>
+        Erick Cordoba Esquivel, 24 años, ciclista de Costa Rica.
+        <br>
+        Nacido el 16 de noviembre de 2001.
+    </p>
+
+    <p>
+        Este ciclista tiene
+        <strong class="victorias">9 victorias</strong>.
+    </p>
+
+
+    <!-- TROFEO -->
+
+    <div class="trofeo-numero">
+
+        <svg width="30"
+             height="30"
+             viewBox="0 0 24 24"
+             fill="#FFD700"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+
+        </svg>
+
+        <span>9</span>
+
+    </div>
+
+
+    <ul class="datos-ciclista">
+
+        <li><strong>Ciclista profesional</strong></li>
+
+        <li>
+            <strong>Peso:</strong> 64 kg
+        </li>
+
+        <li>
+            <strong>Altura:</strong> 171.5 cm
+        </li>
+
+        <li>
+            <strong>Lugar de nacimiento:</strong> Guanacaste
+        </li>
+
+    </ul>
+
+
+    <!-- =================================================
+         FORTALEZAS
+    ================================================== -->
+
+    <div class="cyclist-strengths">
+
+        <h3>Fortalezas</h3>
+
+        <ul class="tags">
+
+            <li class="tag mountain">
+                🏔️ Montaña
+            </li>
+
+            <li class="tag hilly">
+                ⛰️ Media Montaña
+            </li>
+
+            <li class="tag stage-race">
+                👕 Vuelta por etapa
+            </li>
+
+            <li class="tag itt">
+                ⏱️ Contrarreloj (ITT)
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ESPECIALIDADES
+===================================================== -->
+
+<section class="especialidades">
+
+    <h3>Especialidades</h3>
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>One day races</span>
+            <strong>96</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso oneday" style="width:96%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>GC</span>
+            <strong>69</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso gc" style="width:69%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>TT</span>
+            <strong>99</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso tt" style="width:99%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>Sprint</span>
+            <strong>60</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso sprint" style="width:60%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>Climber</span>
+            <strong>66</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso climber" style="width:66%"></div>
+        </div>
+
+    </div>
+
+
+    <div class="barra">
+
+        <div class="barra-titulo">
+            <span>Hills</span>
+            <strong>39</strong>
+        </div>
+
+        <div class="barra-fondo">
+            <div class="barra-progreso hills" style="width:39%"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENLACES
+===================================================== -->
+
+<section class="enlaces">
+
+    <p>
+        <a href="https://www.facebook.com/share/1MsNQfSBsR/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Perfil de Facebook
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2026/09/ranking-costa-rica.html">
+            Ranking | Costa Rica
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2026/09/ranking-web-de-ciclismo.html">
+            Ranking Web de Ciclismo
+        </a>
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     MEJORES RESULTADOS
+===================================================== -->
+
+<section class="resultados">
+
+    <h2>Mejores Resultados</h2>
+
+
+    <p>
+        <a href="vuelta-prejuvenil-costa-rica-etapa-2_77.html">
+            47th Stage Vuelta Prejuvenil ('17)
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/09/clasica-canas-por-siempre-carrera-de-un.html">
+            Clásica Cañas Por Siempre ('23)
+        </a>
+    </p>
+
+
+    <p>
+        2nd Festival Deportivo - MTB ('19)
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/07/cronoescalada-curubande-2021.html">
+            2nd Cronoescalada de Curubande ('21)
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/07/cronoescalada-curubande-2018.html">
+            4th Cronoescalada | One day race ('18)
+        </a>
+    </p>
+
+
+    <p>
+        Cronoescalada del Torno ('17)
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/08/costa-rica-itt-u23-cn-2021.html">
+            TOP 25 Costa Rica ITT-U23 | CN
+            <img class="bandera"
+                 src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                 alt="Costa Rica">
+            ('21)
+        </a>
+    </p>
+
+
+    <p>
+        Vuelta de la Juventud Meta Volante TOP 11 ('17)
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/09/etapa-1-de-la-vuelta-al-porvenir-costa.html">
+            52th Vuelta del Porvenir ('23)
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/09/costa-rica-itt-u23-campeonato.html">
+            TOP 12 Costa Rica ITT-U23 | CN ('23)
+        </a>
+    </p>
+
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/09/cronoescalada-torno-2017.html">
+            🏔️ Cronoescalada Torno ('17)
+        </a>
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     DESTACAR
+===================================================== -->
+
+<section class="destacar">
+
+    <span class="destacar-label">
+        Destacar
+    </span>
+
+    <h3>Mejor Participación de Carrera</h3>
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2025/09/clasica-canas-por-siempre-carrera-de-un.html">
+            Clásica Cañas Por Siempre ('23)
+        </a>
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     EQUIPOS
+===================================================== -->
+
+<section class="equipos">
+
+    <h2>Equipos</h2>
+
+    <p>
+        CCDR Liberia - 2017 - 2018
+    </p>
+
+    <p>
+        Comutrica - 2021
+    </p>
+
+    <p>
+        <a href="https://firstycyclingweb.blogspot.com/2026/03/team-panes-del-abuelo.html">
+            Team Panes del Abuelo - 2022 - 2023
+        </a>
+    </p>
+
+    <p>
+        Escuela de Ciclismo Guido Blanco Liberia - 2019
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     RESULTADOS POR AÑO
+===================================================== -->
+
+<section class="resultados-anuales">
+
+    <h2>Resultados de Ciclismo por Año</h2>
+
+    <div class="botones-anios">
+
+        <button onclick="mostrarContenido(2023)">2023</button>
+        <button onclick="mostrarContenido(2022)">2022</button>
+        <button onclick="mostrarContenido(2021)">2021</button>
+        <button onclick="mostrarContenido(2020)">2020</button>
+        <button onclick="mostrarContenido(2019)">2019</button>
+        <button onclick="mostrarContenido(2018)">2018</button>
+        <button onclick="mostrarContenido(2017)">2017</button>
+        <button onclick="mostrarContenido(2015)">2015</button>
+
+    </div>
+
+
+    <!-- =================================================
+         2023
+    ================================================== -->
+
+    <div id="contenido-2023" class="contenido">
+
+        <h3>2023</h3>
+
+        <div class="evento">
+
+            <span class="fecha">22.10</span>
+
+            <span class="posicion">1</span>
+
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/clasica-canas-por-siempre-carrera-de-un.html">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Cañas Por Siempre
+
+            </a>
+
+        </div>
+
+
+        <p>
+            <strong>27.08</strong> -
+            Vuelta del Porvenir
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/vuelta-al-porvenir-clasificacion.html">
+                25.08 POS 53 Vuelta del Porvenir | 2º Etapa
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/etapa-1-de-la-vuelta-al-porvenir-costa.html">
+                24.08 POS 52 Vuelta del Porvenir | 1º Etapa
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/costa-rica-itt-u23-campeonato.html">
+                23.06 POS 12 Costa Rica ITT-U23 | CN
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2026/08/national-championships-costa-rica-me-itt.html">
+                23.06 - 39
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+                National Championships Costa Rica ME - ITT
+            </a>
+        </p>
+
+
+        <p>
+            <strong>POS 5</strong> -
+            Clásica Chichas Bike
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2022
+    ================================================== -->
+
+    <div id="contenido-2022" class="contenido">
+
+        <h3>2022</h3>
+
+        <h3>
+            POS 3
+            <img class="bandera"
+                 src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                 alt="Costa Rica">
+
+            Campeonato Guanacasteco Criterium
+        </h3>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/costa-rica-rr-u23-campeonatos.html">
+                18.06 - POS 61 Costa Rica RR-U23 | CN
+            </a>
+        </p>
+
+
+        <div class="evento">
+
+            <span class="fecha">17.07</span>
+
+            <span>
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Upala
+            </span>
+
+        </div>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Upala - Combatividad
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 1º Erick Cordoba Esquivel - Panes del Abuelo
+        </p>
+
+        <p>
+            POS 2º Freddy Vasquez
+        </p>
+
+
+        <div class="evento">
+
+            <span class="fecha">19.11</span>
+
+            <span>
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Copa Truchas | NE
+            </span>
+
+        </div>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+
+                Copa Truchas
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 1º - Erick Cordoba - Panes del Abuelo
+        </p>
+
+        <p>
+            POS 2º - Brian Arroyo
+        </p>
+
+        <p>
+            POS 3º - Jose Pablo Solano Murrillo - Sccot Shimano
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2021
+    ================================================== -->
+
+    <div id="contenido-2021" class="contenido">
+
+        <h3>
+            <img class="bandera"
+                 src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                 alt="Costa Rica">
+
+            Campeonato Guanacasteco
+        </h3>
+
+        <p>POS 30º - Comutrica</p>
+
+        <p>Sardinas Bike Store | Tilarán</p>
+
+        <p>POS 10º - Comutrica</p>
+
+
+        <h3>
+            <img class="bandera"
+                 src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                 alt="Costa Rica">
+
+            Cronoescalada Curubande
+        </h3>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/07/cronoescalada-curubande-2021.html">
+                POS 2 - Cronoescalada Curubande
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/12/riders-with-most-top-10-results-in.html">
+                POS 76 - Riders with the most top-10 results in the final result of National Championships Costa Rica MU23 - ITT
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/firstycyclingweb-ranking.html">
+                16.10 POS 3 - FirstyCyclingWeb Ranking
+            </a>
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/08/costa-rica-itt-u23-cn-2021.html">
+                16.10 - POS 25 Costa Rica ITT-U23 | CN
+            </a>
+        </p>
+
+
+        <p>
+            Cronoescalada de Cambalache
+        </p>
+
+        <p>
+            POS 17 - Cronoescalada de Cambalache
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2020
+    ================================================== -->
+
+    <div id="contenido-2020" class="contenido">
+
+        <h3>2020</h3>
+
+        <p>
+            <strong>POS 8</strong> -
+            <img class="bandera"
+                 src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                 alt="Costa Rica">
+
+            Ruta del Fuego
+        </p>
+
+
+        <div class="resultado-trofeo">
+
+            <span>- Pos</span>
+
+            <div class="trofeo">
+
+                <div class="copa"></div>
+
+                <div class="numero">
+                    9
+                </div>
+
+                <div class="pie"></div>
+
+            </div>
+
+            <a href="https://strava.app.link/bpif5X4Gz5b">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Liberia-Rodeito | Strava
+
+            </a>
+
+        </div>
+
+
+        <p>
+            POS 9º Erick Cordoba Esquivel
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2019
+    ================================================== -->
+
+    <div id="contenido-2019" class="contenido">
+
+        <h3>2019</h3>
+
+        <div class="resultado-trofeo">
+
+            <span>30.08 - Pos</span>
+
+            <div class="trofeo">
+
+                <div class="copa"></div>
+
+                <div class="numero">
+                    2
+                </div>
+
+                <div class="pie"></div>
+
+            </div>
+
+            <span>
+
+                Festival Deportivo
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 2º Erick Cordoba Esquivel
+        </p>
+
+
+        <p>
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/vuelta-chorrotega-classification-sub23.html">
+                Vuelta Chorrotega Classification Sub23
+            </a>
+        </p>
+
+
+        <p>
+            POS 69º Etapa 1 | Santa Cruz - La Cruz | Km 115
+        </p>
+
+
+        <div class="resultado-trofeo">
+
+            <span>- Pos</span>
+
+            <div class="trofeo">
+
+                <div class="copa"></div>
+
+                <div class="numero">
+                    4
+                </div>
+
+                <div class="pie"></div>
+
+            </div>
+
+            <a href="https://strava.app.link/QnbWLCBEJ5b">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Subida de la Hulera | Strava
+
+            </a>
+
+        </div>
+
+
+        <p>
+            POS 4º Erick Cordoba Esquivel
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2018
+    ================================================== -->
+
+    <div id="contenido-2018" class="contenido">
+
+        <h3>2018</h3>
+
+        <p>
+            POS 44 -
+            <a href="https://firstycyclingweb.blogspot.com/2026/06/juegos-deportivos-nacionales-2018.html">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Juegos Deportivos Nacionales
+
+            </a>
+        </p>
+
+
+        <div class="evento">
+
+            <span class="fecha">22.10</span>
+
+            <span>
+
+                Clásica Truchas
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                | One day race
+
+            </span>
+
+        </div>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Truchas | One day race
+
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 1º - Erick Cordoba Esquivel - CCDR Liberia
+        </p>
+
+
+        <p>
+            POS 2º - Joel Corea
+        </p>
+
+
+        <p>
+
+            POS 4
+
+            <a href="https://firstycyclingweb.blogspot.com/2025/07/cronoescalada-curubande-2018.html">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Cronoescalada | Curubande
+
+            </a>
+
+        </p>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Vuelta al Chorro - Combatividad
+
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 1º - Erick Cordoba Esquivel
+        </p>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Clásica Upala - Combatividad
+
+            </span>
+
+        </div>
+
+
+        <p>
+            POS 1º - Erick Cordoba Esquivel - CCDR Liberia
+        </p>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <a href="https://firstycyclingweb.blogspot.com/2026/05/circuito-la-arena-2018.html">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Circuito la Arena | Equipos
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         2017
+    ================================================== -->
+
+    <div id="contenido-2017" class="contenido">
+
+        <h3>2017</h3>
+
+
+        <div class="evento">
+
+            <span class="fecha">18.06</span>
+
+            <span>
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                Cronoescalada Torno
+
+            </span>
+
+        </div>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <a href="https://firstycyclingweb.blogspot.com/2025/09/cronoescalada-torno-2017.html?m=1">
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                🏔️ Cronoescalada Torno
+
+            </a>
+
+        </div>
+
+
+        <div class="evento">
+
+            <span class="posicion">1</span>
+
+            <span>
+
+                🥇 Vuelta Prejuvenil a Costa Rica - Combatividad
+
+            </span>
+
+        </div>
+
+
+        <p>
+            26.02 - POS 47 Vuelta Prejuvenil a Costa Rica | General
+        </p>
+
+
+        <p>
+            26.02 - POS 50 Vuelta Prejuvenil Etapa 3
+        </p>
+
+
+        <p>
+            25.02 - POS 47 Vuelta Prejuvenil - Etapa 2
+        </p>
+
+
+        <p>
+            24.02 - POS 70 Vuelta Prejuvenil Etapa 1
+        </p>
+
+
+        <p>
+            20.11 - POS 9 - Copa Guanacasteca | General
+        </p>
+
+
+        <p>
+            POS 58 Vuelta la Juventud Etapa 1 - 108 Km
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         2015
+    ================================================== -->
+
+    <div id="contenido-2015" class="contenido">
+
+        <h3>2015</h3>
+
+        <p>
+
+            <a href="https://firstycyclingweb.blogspot.com/2025/07/crono-escalada-chorro-2015.html">
+
+                Cronoescalada al Chorro
+
+                <img class="bandera"
+                     src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+                     alt="Costa Rica">
+
+                | MTB
+
+            </a>
+
+        </p>
+
+
+        <p>
+            POS 4 Cronoescalada al Chorro | MTB
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PIE DE PÁGINA
+===================================================== -->
+
+<footer>
+
+    <p>
+        ©2026 FirstyCyclingWEB -
+        <a href="#">
+            Política de Privacidad
+        </a>
+    </p>
+
+    <p class="derechos">
+        <strong>
+            Derechos de Privacidad de la Página Web del Ciclista Erick Córdoba Esquivel
+        </strong>
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function mostrarContenido(anio) {
+
+    const contenidos =
+        document.querySelectorAll(".contenido");
+
+    contenidos.forEach(function(contenido) {
+
+        contenido.style.display = "none";
+
+    });
+
+
+    const seleccionado =
+        document.getElementById("contenido-" + anio);
+
+    if (seleccionado) {
+
+        seleccionado.style.display = "block";
+
+        seleccionado.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+}
+
+
+/* Mostrar 2023 inicialmente */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    mostrarContenido(2023);
+
+});
+
+</script>
+
+</body>
+</html>
