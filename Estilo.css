@@ -1,1016 +1,396 @@
 /* =====================================================
-   CONFIGURACIÓN GENERAL
+   VARIABLES Y ESTILOS GLOBALES
 ===================================================== */
+:root {
+    --primary-color: #d32f2f;
+    --primary-dark: #b71c1c;
+    --accent-gold: #fbc02d;
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #e9ecef;
+    --radius: 10px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background: #f5f5f5;
-
-    color: #222;
-
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.5;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
 a {
-    color: #000;
+    color: var(--text-primary);
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
 }
-
 
 /* =====================================================
-   ENCABEZADO
+   HEADER & PROFILE BANNER
 ===================================================== */
-
-.encabezado {
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 30px 20px;
-
-    text-align: center;
-
-    background: #fff;
-
-    border-bottom: 1px solid #ddd;
-}
-
-.encabezado h1 {
-    margin: 0 0 10px;
-
-    font-size: 34px;
-
-    color: #111;
-}
-
-.encabezado p {
-    margin: 0;
-
-    font-size: 18px;
-
-    color: #555;
-}
-
-
-/* =====================================================
-   PERFIL
-===================================================== */
-
-.perfil-ciclista {
-    position: relative;
-
-    overflow: hidden;
-
-    max-width: 1200px;
-
-    margin: 20px auto 0;
-
-    padding: 35px;
-
-    color: #fff;
-
-    border-radius: 12px;
-
-    font-family: Arial, sans-serif;
-
-    background:
-        linear-gradient(
-            rgba(220, 0, 0, .82),
-            rgba(170, 0, 0, .88)
-        ),
-        url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    box-shadow:
-        0 10px 28px rgba(140, 0, 0, .50);
-}
-
-.perfil-ciclista h2 {
-    margin: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    font-size: 48px;
-
-    font-weight: 700;
-
-    text-shadow:
-        2px 2px 8px rgba(0, 0, 0, .85);
-}
-
-.perfil-ciclista h2 img {
-    display: block;
-
-    width: 42px;
-
-    height: auto;
-}
-
-.perfil-ciclista hr {
-    border: none;
-
-    height: 2px;
-
-    margin: 18px 0;
-
-    background: rgba(255, 255, 255, .45);
-}
-
-.perfil-info {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 20px;
-}
-
-.perfil-datos {
-    font-size: 24px;
-
-    text-shadow:
-        1px 1px 5px rgba(0, 0, 0, .85);
-}
-
-
-/* =====================================================
-   REDES SOCIALES
-===================================================== */
-
-.perfil-redes {
-    display: flex;
-
-    gap: 12px;
-}
-
-.perfil-redes a {
-    width: 52px;
-
-    height: 52px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    border-radius: 50%;
-
-    color: #fff;
-
-    text-decoration: none;
-
-    font-size: 24px;
-
-    background: rgba(255, 255, 255, .18);
-
-    backdrop-filter: blur(6px);
-
-    transition: .3s;
-}
-
-.perfil-redes a:hover {
-    background: #fff;
-
-    color: #c00000;
-
-    transform:
-        translateY(-4px)
-        scale(1.1);
-}
-
-
-/* =====================================================
-   INFORMACIÓN
-===================================================== */
-
-.informacion {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 25px;
-
-    background: #fff;
-
-    color: #333;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, .08);
-}
-
-.informacion p {
-    font-size: 18px;
-
-    line-height: 1.6;
-}
-
-.victorias {
-    color: #b8860b;
-
-    font-size: 20px;
-}
-
-
-/* =====================================================
-   TROFEO
-===================================================== */
-
-.trofeo-numero {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 24px;
-
-    color: #000;
-}
-
-.trofeo-numero span {
-    font-weight: bold;
-}
-
-
-/* =====================================================
-   DATOS
-===================================================== */
-
-.datos-ciclista {
-    margin-top: 20px;
-
-    padding-left: 25px;
-
-    line-height: 1.9;
-
-    font-size: 17px;
-}
-
-
-/* =====================================================
-   FORTALEZAS
-===================================================== */
-
-.cyclist-strengths {
-    margin-top: 25px;
-}
-
-.cyclist-strengths h3 {
-    margin-bottom: 12px;
-
-    font-size: 22px;
-}
-
-.tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    padding: 0;
-
-    margin: 0;
-
-    list-style: none;
-}
-
-.tag {
-    padding: 8px 12px;
-
-    border-radius: 20px;
-
-    font-weight: bold;
-
-    font-size: 14px;
-}
-
-.mountain {
-    background: #e8f5e9;
-
-    color: #1b5e20;
-}
-
-.hilly {
-    background: #f1f8e9;
-
-    color: #33691e;
-}
-
-.stage-race {
-    background: #fff8e1;
-
-    color: #8d6e00;
-}
-
-.itt {
-    background: #e3f2fd;
-
-    color: #0d47a1;
-}
-
-
-/* =====================================================
-   ESPECIALIDADES
-===================================================== */
-
-.especialidades {
-    width: 200px;
-
-    margin: 20px 0 20px 20px;
-
-    padding: 10px;
-
-    background: #fff;
-
-    border: 1px solid #ccc;
-
-    border-radius: 6px;
-
-    font-size: 11px;
-
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, .1);
-}
-
-.especialidades h3 {
-    margin: 0 0 10px;
-
-    text-align: center;
-
-    font-size: 14px;
-
-    color: #333;
-}
-
-.barra {
-    margin-bottom: 8px;
-}
-
-.barra-titulo {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-bottom: 3px;
-
-    color: #444;
-}
-
-.barra-fondo {
-    width: 100%;
-
-    height: 10px;
-
-    overflow: hidden;
-
-    background: #eee;
-
-    border-radius: 3px;
-}
-
-.barra-progreso {
-    height: 100%;
-
-    border-radius: 3px;
-}
-
-.oneday {
-    background: lightgreen;
-}
-
-.gc {
-    background: lightblue;
-}
-
-.tt {
-    background: red;
-}
-
-.sprint {
-    background: orange;
-}
-
-.climber {
-    background: purple;
-}
-
-.hills {
-    background: pink;
-}
-
-
-/* =====================================================
-   ENLACES
-===================================================== */
-
-.enlaces {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 20px;
-
-    background: #fff;
-
-    border-radius: 10px;
-}
-
-.enlaces p {
-    margin: 12px 0;
-}
-
-
-/* =====================================================
-   RESULTADOS
-===================================================== */
-
-.resultados {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 20px;
-
-    background: #fff;
-
-    border-radius: 10px;
-}
-
-.resultados h2 {
-    margin-top: 0;
-
-    border-bottom: 2px solid #111;
-
-    padding-bottom: 10px;
-}
-
-.resultados p {
-    margin: 10px 0;
-
-    line-height: 1.5;
-}
-
-.resultados a {
-    color: #000;
-}
-
-
-/* =====================================================
-   BANDERAS
-===================================================== */
-
-.bandera {
-    width: 20px;
-
-    height: auto;
-
-    display: inline-block;
-
-    vertical-align: middle;
-
-    margin-left: 4px;
-
-    margin-right: 4px;
-}
-
-
-/* =====================================================
-   DESTACAR
-===================================================== */
-
-.destacar {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 20px;
-
-    background: #fff;
-
-    border-radius: 10px;
-}
-
-.destacar-label {
-    display: inline-block;
-
-    padding: 5px 10px;
-
-    border-radius: 5px;
-
-    background: rgba(0, 128, 0, .2);
-
-    color: #006400;
-
-    font-weight: bold;
-}
-
-.destacar h3 {
-    margin-bottom: 8px;
-}
-
-
-/* =====================================================
-   EQUIPOS
-===================================================== */
-
-.equipos {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 20px;
-
-    background: #fff;
-
-    border-radius: 10px;
-}
-
-.equipos h2 {
-    text-transform: uppercase;
-
-    font-size: 20px;
-}
-
-.equipos p {
-    margin: 8px 0;
-}
-
-
-/* =====================================================
-   RESULTADOS POR AÑO
-===================================================== */
-
-.resultados-anuales {
-    max-width: 1200px;
-
-    margin: 20px auto;
-
-    padding: 20px;
-
-    background: #fff;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, .06);
-}
-
-.resultados-anuales h2 {
-    margin-top: 0;
-
-    text-align: center;
-}
-
-
-/* =====================================================
-   BOTONES
-===================================================== */
-
-.botones-anios {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-bottom: 20px;
-}
-
-.botones-anios button {
-    padding: 9px 16px;
-
-    border: none;
-
-    border-radius: 5px;
-
+.main-header {
     background: #111;
-
     color: #fff;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: .2s;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
 }
 
-.botones-anios button:hover {
-    background: #333;
-
-    transform: translateY(-1px);
+.main-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-
-/* =====================================================
-   CONTENIDO DE AÑOS
-===================================================== */
-
-.contenido {
-    display: none;
-
-    padding: 20px;
-
-    border-top: 2px solid #111;
-
-    animation: aparecer .3s ease;
+.main-header p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 4px;
 }
 
-.contenido h3 {
+.profile-card {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: white;
+    border-radius: var(--radius);
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: var(--shadow);
+}
+
+.profile-header h2 {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.flag-icon {
+    width: 32px;
+    border-radius: 3px;
+}
+
+.profile-badges {
+    display: flex;
+    gap: 10px;
     margin-top: 10px;
 }
 
-.contenido p {
-    line-height: 1.6;
-
-    margin: 10px 0;
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(4px);
 }
 
-
-/* =====================================================
-   EVENTOS
-===================================================== */
-
-.evento {
+.profile-footer {
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
-
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
+    gap: 15px;
+}
 
+.wins-badge {
+    display: flex;
+    align-items: center;
     gap: 8px;
-
-    margin-bottom: 12px;
-
-    padding: 10px;
-
-    background: #fff;
-
-    border: 1px solid #ddd;
-
-    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
 }
 
-.fecha {
-    min-width: 55px;
-
-    font-weight: bold;
-
-    color: #111;
+.social-links {
+    display: flex;
+    gap: 10px;
 }
 
-.posicion {
-    display: inline-flex;
-
-    justify-content: center;
-
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    display: flex;
     align-items: center;
-
-    min-width: 28px;
-
-    min-height: 25px;
-
-    padding: 3px 7px;
-
-    background: #ffd700;
-
-    border: 1px solid #c99700;
-
-    border-radius: 4px;
-
-    color: #111;
-
-    font-weight: bold;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background 0.2s;
 }
 
+.social-links a:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
 
 /* =====================================================
-   TROFEO RESULTADO
+   LAYOUT (GRID)
 ===================================================== */
+.main-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+}
 
-.resultado-trofeo {
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.card h2, .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    margin-top: 20px;
+}
+
+/* =====================================================
+   SIDEBAR COMPONENTES
+===================================================== */
+.data-list {
+    list-style: none;
+}
+
+.data-list li {
     display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+}
 
-    align-items: center;
-
+.tags-container {
+    display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+}
 
-    gap: 7px;
-
-    margin: 12px 0;
-
-    font-size: 16px;
-
+.tag {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
     font-weight: 600;
-
-    color: #222;
 }
 
-.trofeo {
-    position: relative;
+.mountain { background: #e8f5e9; color: #2e7d32; }
+.hilly { background: #f1f8e9; color: #558b2f; }
+.stage-race { background: #fff8e1; color: #f57f17; }
+.itt { background: #e3f2fd; color: #1565c0; }
 
-    width: 32px;
-
-    height: 32px;
-
-    flex-shrink: 0;
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.copa {
-    position: absolute;
-
-    top: 2px;
-
-    left: 6px;
-
-    width: 20px;
-
-    height: 14px;
-
-    background: #f4b400;
-
-    border-radius: 4px 4px 8px 8px;
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
 }
 
-.copa::before,
-.copa::after {
-    content: "";
-
-    position: absolute;
-
-    top: 2px;
-
-    width: 6px;
-
-    height: 10px;
-
-    border: 2px solid #f4b400;
-
-    border-radius: 10px;
-}
-
-.copa::before {
-    left: -8px;
-
-    border-right: none;
-}
-
-.copa::after {
-    right: -8px;
-
-    border-left: none;
-}
-
-.numero {
-    position: absolute;
-
-    top: 9px;
-
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    font: bold 13px Arial, sans-serif;
-
-    color: #222;
-}
-
-.pie {
-    position: absolute;
-
-    top: 16px;
-
-    left: 14px;
-
-    width: 3px;
-
+.bar-bg {
     height: 8px;
-
-    background: #f4b400;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.pie::after {
-    content: "";
+.bar-fill { height: 100%; border-radius: 4px; }
+.oneday { background: #66bb6a; }
+.tt { background: #ef5350; }
+.gc { background: #42a5f5; }
+.climber { background: #ab47bc; }
+.sprint { background: #ffa726; }
+.hills { background: #ec407a; }
 
-    position: absolute;
-
-    left: -6px;
-
-    bottom: -6px;
-
-    width: 15px;
-
-    height: 6px;
-
-    background: #f4b400;
-
-    clip-path:
-        polygon(
-            20% 0%,
-            80% 0%,
-            100% 100%,
-            0% 100%
-        );
+.teams-list {
+    list-style: none;
 }
 
+.teams-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.teams-list small {
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   COLUMNA DE RESULTADOS
+===================================================== */
+.featured-card {
+    background: #fff9e6;
+    border: 1px solid #ffe082;
+}
+
+.featured-badge {
+    background: #f57f17;
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.featured-card h3 {
+    margin: 10px 0 5px;
+}
+
+.btn-link {
+    color: #f57f17;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.year-selector {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.btn-year {
+    border: 1px solid var(--border-color);
+    background: var(--bg-main);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-year.active, .btn-year:hover {
+    background: var(--text-primary);
+    color: white;
+    border-color: var(--text-primary);
+}
+
+.year-content {
+    display: none;
+}
+
+.year-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #fff;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    min-width: 45px;
+}
+
+.pos-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.pos-badge.gold { background: #ffe082; color: #f57f17; }
+.pos-badge.silver { background: #cfd8dc; color: #455a64; }
+.pos-badge.bronze { background: #d7ccc8; color: #5d4037; }
+
+.event-info {
+    font-size: 0.9rem;
+}
+
+.links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.external-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: var(--bg-main);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
 
 /* =====================================================
    FOOTER
 ===================================================== */
-
-footer {
-    margin-top: 30px;
-
-    padding: 25px 15px;
-
+.main-footer {
     text-align: center;
-
-    background: #f1f1f1;
-
-    color: #333;
-
-    font-size: 14px;
+    padding: 30px 20px;
+    background: #fff;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
-footer a {
-    color: #0066cc;
+.main-footer .subtext {
+    margin-top: 5px;
+    font-size: 0.75rem;
 }
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.derechos {
-    margin-top: 12px;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   ANIMACIÓN
-===================================================== */
-
-@keyframes aparecer {
-
-    from {
-        opacity: 0;
-
-        transform: translateY(5px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
-}
-
 
 /* =====================================================
    RESPONSIVE
 ===================================================== */
-
-@media (max-width: 768px) {
-
-    .encabezado h1 {
-        font-size: 26px;
+@media (max-width: 850px) {
+    .main-grid {
+        grid-template-columns: 1fr;
     }
-
-    .encabezado p {
-        font-size: 16px;
+    
+    .profile-header h2 {
+        font-size: 1.6rem;
     }
-
-
-    .perfil-ciclista {
-        margin: 10px;
-
-        padding: 25px;
-
-        border-radius: 10px;
-    }
-
-    .perfil-ciclista h2 {
-        font-size: 30px;
-
-        flex-wrap: wrap;
-    }
-
-    .perfil-ciclista h2 img {
-        width: 32px;
-    }
-
-    .perfil-datos {
-        font-size: 18px;
-    }
-
-
-    .informacion,
-    .enlaces,
-    .resultados,
-    .destacar,
-    .equipos,
-    .resultados-anuales {
-        margin-left: 10px;
-
-        margin-right: 10px;
-
-        padding: 15px;
-    }
-
-
-    .especialidades {
-        margin-left: 10px;
-    }
-
-
-    .botones-anios button {
-        flex: 1 1 auto;
-
-        min-width: 70px;
-    }
-
-
-    .evento {
-        align-items: flex-start;
-
-        flex-direction: row;
-    }
-
-
-    .contenido {
-        padding: 12px;
-    }
-
-}
-
-
-/* =====================================================
-   PANTALLAS MUY PEQUEÑAS
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .perfil-ciclista h2 {
-        font-size: 25px;
-    }
-
-    .perfil-redes a {
-        width: 44px;
-
-        height: 44px;
-
-        font-size: 20px;
-    }
-
-    .especialidades {
-        width: calc(100% - 20px);
-
-        max-width: 250px;
-    }
-
-    .tags {
-        flex-direction: column;
-    }
-
-    .tag {
-        width: fit-content;
-    }
-
 }
