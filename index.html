@@ -41,72 +41,50 @@
 <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh_Yhw04y5xrOaqDlWekOeCvxy_wy-kZhqERYNuGJKuBLSRjK10DMeakXAjg2UyejS1pR0CiP6uElsCMGjHWs6E70X0BnWrXH6e1pynMSw9hfkcGXfKlJlm1PhyphenhyphenzsiHtipG1d1oZp3ALg-CYSQzrZP4JSfg9S1dAVMuR5K6iM-v7-IuJHPOd4lR2XuuVeE/s1080/Ciclista%20del%20equipo%20de%20panes%20del%20abuelo.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1080" data-original-width="1080" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh_Yhw04y5xrOaqDlWekOeCvxy_wy-kZhqERYNuGJKuBLSRjK10DMeakXAjg2UyejS1pR0CiP6uElsCMGjHWs6E70X0BnWrXH6e1pynMSw9hfkcGXfKlJlm1PhyphenhyphenzsiHtipG1d1oZp3ALg-CYSQzrZP4JSfg9S1dAVMuR5K6iM-v7-IuJHPOd4lR2XuuVeE/s320/Ciclista%20del%20equipo%20de%20panes%20del%20abuelo.jpg"/></a></div>
 
 
-
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perfil Ciclista</title>
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
-}
-
-.banner-ciclista{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:35px 30px;
-    background:linear-gradient(135deg,#b71c1c,#c62828,#b71c1c);
-    color:white;
-    border-radius:8px;
+.perfil-ciclista{
     position:relative;
     overflow:hidden;
+    border-radius:12px;
+    padding:35px;
+    color:#fff;
+    font-family:Arial,sans-serif;
+
+    /* Fondo rojo intenso */
+    background:
+        linear-gradient(
+            rgba(220,0,0,.82),
+            rgba(170,0,0,.88)
+        ),
+        url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    box-shadow:0 10px 28px rgba(140,0,0,.50);
 }
 
-.banner-ciclista::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600')
-    center/cover;
-    opacity:.08;
-}
-
-.contenido{
-    position:relative;
-    z-index:2;
-}
-
-.nombre{
-    font-size:58px;
+.perfil-ciclista h1{
+    margin:0;
+    font-size:48px;
     font-weight:700;
-    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.85);
 }
 
-.linea{
-    height:1px;
-    background:rgba(255,255,255,.4);
-    margin-bottom:20px;
+.perfil-ciclista hr{
+    border:none;
+    height:2px;
+    background:rgba(255,255,255,.45);
+    margin:18px 0;
 }
 
-.info{
+.perfil-info{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -114,86 +92,92 @@ body{
     gap:20px;
 }
 
-.datos{
-    font-size:28px;
+.perfil-datos{
+    font-size:24px;
+    text-shadow:1px 1px 5px rgba(0,0,0,.85);
 }
 
-.datos strong{
-    font-weight:700;
-}
-
-.redes{
+.perfil-redes{
     display:flex;
-    gap:15px;
+    gap:12px;
 }
 
-.redes a{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:rgba(0,0,0,.25);
+.perfil-redes a{
+    width:52px;
+    height:52px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    color:white;
+    align-items:center;
+    border-radius:50%;
+    color:#fff;
     text-decoration:none;
-    font-size:28px;
+    font-size:24px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(6px);
     transition:.3s;
 }
 
-.redes a:hover{
-    transform:scale(1.1);
+.perfil-redes a:hover{
+    background:#fff;
+    color:#c00000;
+    transform:translateY(-4px) scale(1.1);
 }
 
 @media(max-width:768px){
-    .nombre{
-        font-size:34px;
+
+    .perfil-ciclista{
+        padding:25px;
     }
 
-    .datos{
-        font-size:20px;
+    .perfil-ciclista h1{
+        font-size:30px;
     }
+
+    .perfil-datos{
+        font-size:18px;
+    }
+
 }
 </style>
-</head>
-<body>
 
-<div class="banner-ciclista">
-    <div class="contenido">
+<div class="perfil-ciclista">
 
-        <div class="nombre">
-            Erick Córdoba Esquivel
+    <h1>
+        Erick Córdoba Esquivel
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
+             alt="Costa Rica"
+             width="42">
+    </h1>
+
+    <hr>
+
+    <div class="perfil-info">
+
+        <div class="perfil-datos">
+            <strong>Ciclista</strong> • Costa Rica
         </div>
 
-        <div class="linea"></div>
+        <div class="perfil-redes">
 
-        <div class="info">
+            <a href="https://x.com/EsquivelEr85735" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-            <div class="datos">
-                <strong>Ciclista</strong>, Costa Rica, 23 años
-            </div>
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
 
-            <div class="redes">
-                <a href="https://x.com/EsquivelEr85735" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
-                    <i class="fa-brands fa-strava"></i>
-                </a>
-            </div>
+            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
+                <i class="fa-brands fa-strava"></i>
+            </a>
 
         </div>
 
     </div>
+
 </div>
 
-</body>
-</html>
+
 
     <!-- Cuerpo blanco con texto -->
     <div style="background-color: white; padding: 20px; color: #333;">
