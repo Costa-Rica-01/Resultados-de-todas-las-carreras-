@@ -519,11 +519,23 @@
     <button onclick="mostrarContenido(2017)">2017</button>
     <button onclick="mostrarContenido(2015)">2015</button>
 
-    <div id="contenido-2026" class="contenido"></div>
- <a href="https://strava.app.link/AordyEmTx6b"> pos 8 Ride la Montaña | Strava </a>
-   
-    </div>
-    </div>
+    <div id="contenido-2026" class="contenido">
+  <a href="https://strava.app.link/AordyEmTx6b">pos 8 Ride la Montaña | Strava</a>
+</div>
+
+<script>
+  // Obtener el año actual
+  const añoActual = new Date().getFullYear();
+
+  // Seleccionar el bloque
+  const contenido2026 = document.getElementById("contenido-2026");
+
+  // Mostrar solo si el año es 2026
+  if (añoActual !== 2026) {
+    contenido2026.style.display = "none";
+  }
+</script>
+
     
 
    <div id="contenido-2023" class="contenido">
