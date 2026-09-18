@@ -42,297 +42,136 @@
 
 
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title></title>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.perfil-ciclista{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    padding:35px;
+    color:#fff;
+    font-family:Arial,sans-serif;
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-}
-
-.perfil {
-    width: 100%;
-    max-width: 1000px;
-    min-height: 580px;
-    margin: 5px auto;
-    padding: 55px 65px;
-
-    position: relative;
-    overflow: hidden;
-
-    border-radius: 28px;
-
+    /* Fondo rojo intenso */
     background:
         linear-gradient(
-            rgba(190, 0, 0, 0.88),
-            rgba(190, 0, 0, 0.88)
+            rgba(220,0,0,.82),
+            rgba(170,0,0,.88)
         ),
-        url("https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600")
-        center / cover;
+        url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80");
 
-    color: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    box-shadow:0 10px 28px rgba(140,0,0,.50);
 }
 
-/* Capa roja adicional */
-.perfil::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(150, 0, 0, 0.25),
-        rgba(255, 0, 0, 0.08)
-    );
-    pointer-events: none;
+.perfil-ciclista h1{
+    margin:0;
+    font-size:48px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.85);
 }
 
-.contenido {
-    position: relative;
-    z-index: 2;
+.perfil-ciclista hr{
+    border:none;
+    height:2px;
+    background:rgba(255,255,255,.45);
+    margin:18px 0;
 }
 
-/* Nombre */
-.nombre {
-    width: 70%;
-    font-size: 70px;
-    line-height: 0.88;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 42px;
+.perfil-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
 }
 
-/* Bandera */
-.bandera {
-    position: absolute;
-    top: 35px;
-    right: 0;
-
-    width: 105px;
-    height: 63px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #000080 0%,
-            #000080 16%,
-            white 16%,
-            white 33%,
-            #ce1126 33%,
-            #ce1126 67%,
-            white 67%,
-            white 84%,
-            #000080 84%,
-            #000080 100%
-        );
-
-    border: 2px solid rgba(255,255,255,0.35);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+.perfil-datos{
+    font-size:24px;
+    text-shadow:1px 1px 5px rgba(0,0,0,.85);
 }
 
-/* Pequeño emblema de Costa Rica */
-.bandera::after {
-    content: "🇨🇷";
-    position: absolute;
-    left: 36px;
-    top: 18px;
-    font-size: 18px;
+.perfil-redes{
+    display:flex;
+    gap:12px;
 }
 
-/* Línea */
-.linea {
-    width: 100%;
-    height: 4px;
-    background: rgba(255,255,255,0.65);
-    margin-bottom: 48px;
+.perfil-redes a{
+    width:52px;
+    height:52px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(6px);
+    transition:.3s;
 }
 
-/* Información */
-.info {
-    font-size: 43px;
-    line-height: 1.2;
-    margin-bottom: 55px;
+.perfil-redes a:hover{
+    background:#fff;
+    color:#c00000;
+    transform:translateY(-4px) scale(1.1);
 }
 
-.info strong {
-    font-weight: 800;
-}
+@media(max-width:768px){
 
-/* Redes */
-.redes {
-    display: flex;
-    gap: 28px;
-}
-
-.redes a {
-    width: 130px;
-    height: 130px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(190, 55, 55, 0.88);
-
-    color: white;
-    text-decoration: none;
-
-    font-size: 65px;
-
-    transition: 0.3s;
-}
-
-.redes a:hover {
-    transform: scale(1.08);
-    background: rgba(150, 30, 30, 0.95);
-}
-
-/* X */
-.redes .x i {
-    font-size: 58px;
-}
-
-/* Instagram */
-.redes .instagram i {
-    font-size: 62px;
-}
-
-/* Strava */
-.redes .strava i {
-    font-size: 60px;
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-
-    .perfil {
-        min-height: auto;
-        padding: 40px 30px;
-        border-radius: 20px;
+    .perfil-ciclista{
+        padding:25px;
     }
 
-    .nombre {
-        width: 80%;
-        font-size: 43px;
-        line-height: 0.95;
-        margin-bottom: 35px;
+    .perfil-ciclista h1{
+        font-size:30px;
     }
 
-    .bandera {
-        width: 75px;
-        height: 45px;
-        top: 25px;
-        right: 5px;
+    .perfil-datos{
+        font-size:18px;
     }
 
-    .bandera::after {
-        left: 25px;
-        top: 12px;
-        font-size: 14px;
-    }
-
-    .linea {
-        margin-bottom: 35px;
-    }
-
-    .info {
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-
-    .redes {
-        gap: 18px;
-    }
-
-    .redes a {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
-    }
-
-    .redes .x i {
-        font-size: 40px;
-    }
-
-    .redes .instagram i {
-        font-size: 42px;
-    }
-
-    .redes .strava i {
-        font-size: 40px;
-    }
 }
 </style>
-</head>
 
-<body>
+<div class="perfil-ciclista">
 
-<div class="perfil">
+    <h1>
+        Erick Córdoba Esquivel
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
+             alt="Costa Rica"
+             width="42">
+    </h1>
 
-    <div class="contenido">
+    <hr>
 
-        <div class="nombre">
-            Erick Córdoba<br>
-            Esquivel
-        </div>
+    <div class="perfil-info">
 
-        <div class="bandera"></div>
-
-        <div class="linea"></div>
-
-        <div class="info">
+        <div class="perfil-datos">
             <strong>Ciclista</strong> • Costa Rica
         </div>
 
-        <div class="redes">
+        <div class="perfil-redes">
 
-            <a class="x"
-               href="https://x.com/EsquivelEr85735"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a href="https://x.com/EsquivelEr85735" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
 
-            <a class="instagram"
-               href="https://www.instagram.com/erickesquivel126"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a class="strava"
-               href="https://strava.app.link/fchCAI0UrWb"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
                 <i class="fa-brands fa-strava"></i>
             </a>
 
-        </div>
-
-    </div>
-
-</div>
-
-</body>
-</html>
         </div>
 
     </div>
